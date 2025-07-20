@@ -58,3 +58,15 @@ class TestMemoize(unittest.TestCase):
             self.assertEqual(obj.a_property, 42)
             self.assertEqual(obj.a_property, 42)
             mock.assert_called_once()
+
+# test_utils.py
+import unittest
+from utils import add_numbers
+
+class TestUtils(unittest.TestCase):
+    def test_add(self):
+        self.assertEqual(add_numbers(3, 5), 8)
+        self.assertEqual(add_numbers(-2, 5), 3)
+
+if __name__ == '__main__':
+    unittest.main()

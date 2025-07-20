@@ -44,3 +44,15 @@ class TestGithubOrgClient(unittest.TestCase):
     def test_has_license(self, repo, license_key, expected):
         """Test has_license method"""
         self.assertEqual(GithubOrgClient.has_license(repo, license_key), expected)
+
+# test_client.py
+import unittest
+from client import fetch_greeting
+
+class TestClient(unittest.TestCase):
+    def test_fetch_greeting(self):
+        result = fetch_greeting("Bush")
+        self.assertEqual(result['message'], 'Hello, Bush!')
+
+if __name__ == '__main__':
+    unittest.main()

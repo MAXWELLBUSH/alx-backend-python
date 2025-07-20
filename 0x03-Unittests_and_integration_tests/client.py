@@ -18,3 +18,10 @@ class GithubOrgClient:
         """Return org information"""
         url = self.ORG_URL.format(self.org_name)
         return requests.get(url).json()
+
+# client.py
+import requests
+
+def fetch_greeting(name):
+    response = requests.get(f"http://127.0.0.1:5000/api/greet?name={name}")
+    return response.json()

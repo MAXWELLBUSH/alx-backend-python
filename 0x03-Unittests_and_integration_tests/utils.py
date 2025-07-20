@@ -30,3 +30,7 @@ def memoize(fn):
         return getattr(self, attr_name)
 
     return wrapper
+
+# utils.py
+def add_numbers(a, b):
+    return a + b
